@@ -1,0 +1,60 @@
+
+#carousel{
+    margin: 0 auto;
+    width: 95%;
+
+    img{
+        height: 500px;
+        width: 100%;
+    }
+}
+
+#title{
+    color: red;
+    margin: 1em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#muscleHeader{
+    margin: 0 auto;
+    width: 75%;
+
+    a{
+        color: black;
+        text-decoration: none;
+        transition: color .2s;
+
+        &:hover{
+            color: red;
+        }
+    }
+}
+
+#hr{
+    width: 85%;
+    height: 2px;
+    background-color: black;
+    margin: 0 auto 2em auto;
+}
+
+#exerciseDisplay{
+    margin: 0 auto;
+}
+
+.card{
+   height: 100%;
+   
+   img{
+       height: 100%;
+   }
+
+   .cardBtn{
+       width: 100%;
+
+       a{
+           text-decoration: none;
+           color: inherit;
+       }
+   }
+}

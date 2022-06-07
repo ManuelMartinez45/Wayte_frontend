@@ -1,0 +1,54 @@
+#exerciseTitle{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-decoration: underline;
+}
+
+
+
+#exerciseImg{
+    width: 50vw;
+}
+
+#exerciseSpan{
+    font-size: .9em;
+    font-weight: normal;
+}
+
+#large{
+    #exerciseInfo{
+        margin-top: 8em;
+        
+        #exerciseSpan{
+            margin-left: .5em
+        }
+    }
+}
+
+
+#medium, #small, #xsmall{
+    #exerciseImg{
+        width: 55vw
+    }
+    #exerciseInfo{
+        margin-top: 3em;
+    }
+
+    
+}
+
+#large, #medium, #small, #xsmall{
+    #exercisePerform{
+        margin-top: 3em;
+    }
+}
+
+#xsmall{
+    #exerciseImg{
+        width: 80vw;
+        // margin-bottom: 3em;
+    }
+    
+    
+}

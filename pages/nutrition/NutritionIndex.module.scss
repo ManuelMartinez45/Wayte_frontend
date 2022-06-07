@@ -1,0 +1,162 @@
+
+#nutritionHeader{
+    height: 150px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 400;
+}
+
+#hr{
+    height: 10px;
+}
+
+
+.twoPiece, .threePiece{
+    overflow: hidden;
+
+    h5{
+        background-size: cover;
+        background-position: center;
+        text-transform: capitalize;
+        width: 100%;
+        height: 33vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+        transition: transform .7s;
+    
+        
+        &:hover{
+            transform: scale(1.08);
+        }
+    }
+
+    
+}
+
+.threePiece{
+
+    #img1{
+        background-image: linear-gradient(to top, rgb(00,00,00,.4), rgb(255,255,255, 0)), url("https://mensfitness.co.uk/wp-content/uploads/sites/2/2022/05/GettyImages-1142022470-2.jpg?w=350");
+    }
+    
+    #img2{
+        background-image: linear-gradient(to top, rgb(00,00,00,.4), rgb(255,255,255, 0)), url("https://images.unsplash.com/photo-1547496502-affa22d38842?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c2FsYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
+        
+    }
+    
+    #img3{
+        background-image: linear-gradient(to top, rgb(00,00,00,.4), rgb(255,255,255, 0)), url("https://images.unsplash.com/photo-1567769541495-338ee7203e3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+        
+    }
+}
+
+.twoPiece{
+    #img1{
+        background-image: linear-gradient(to top, rgb(00,00,00,.4), rgb(255,255,255, 0)), url("https://images.unsplash.com/photo-1606756790138-261d2b21cd75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGhlYWx0aHklMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
+        
+    }
+    
+    #img2{
+        background-image: linear-gradient(to top, rgb(00,00,00,.4), rgb(255,255,255, 0)), url("https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGhlYWx0aHklMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+
+    }
+}
+
+#sideBar{
+    width: 100%;
+    // height: 65vh;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0;
+
+    h5{
+        text-decoration: underline;
+    }
+
+    p{
+        width: 80%;
+        margin: 1em auto;
+    }
+
+    hr{
+        margin: 0 auto;
+        width: 50%;
+        height: 2px;
+        background-color: red;
+    }   
+}
+
+#quoteRow{
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    h5{
+        text-align: end;
+    }
+
+}
+
+.fourPiece{
+    overflow: hidden;
+
+    h6{
+        background-size: cover;
+        background-position: center;
+        text-transform: capitalize;
+        width: 100%;
+        height: 33vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+        transition: transform .7s;
+
+        &:hover{
+            transform: scale(1.08);
+        }
+    }
+
+    #img1{
+        background-image: linear-gradient(to top, rgb(00,00,00), rgb(255,255,255, 0)), url("https://images.unsplash.com/photo-1626323107927-008ae2828ab6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGJicXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+        
+    }
+    
+    #img2{
+        background-image: linear-gradient(to top, rgb(00,00,00,.4), rgb(255,255,255, 0)), url("https://images.unsplash.com/photo-1509402308-817902776267?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmFrZWQlMjBmaXNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+        
+    }
+    
+    #img3{
+        background-image: linear-gradient(to top, rgb(00,00,00,.4), rgb(255,255,255, 0)), url("https://images.unsplash.com/photo-1516901121982-4ba280115a36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHN0aXIlMjBmcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+        
+    }
+    #img4{
+        background-image: linear-gradient(to top, rgb(00,00,00,.4), rgb(255,255,255, 0)), url("https://images.unsplash.com/photo-1571748982800-fa51082c2224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z3JhaW5zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+        
+    }
+    #img5{
+        background-image: linear-gradient(to top, rgb(00,00,00,.4), rgb(255,255,255, 0)), url("https://images.unsplash.com/photo-1521986329282-0436c1f1e212?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fG51dHJpdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+        
+    }
+    #img6{
+        background-image: linear-gradient(to top, rgb(00,00,00,.4), rgb(255,255,255, 0)), url("https://images.unsplash.com/photo-1611077543575-445af69a7adf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fG51dHJpdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+        
+    }
+    #img7{
+        background-image: linear-gradient(to top, rgb(00,00,00,.4), rgb(255,255,255, 0)), url("https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fG51dHJpdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+        
+    }
+    #img8{
+        background-image: linear-gradient(to top, rgb(00,00,00,.4), rgb(255,255,255, 0)), url("https://images.unsplash.com/photo-1610057098265-05f2bcbedd55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fG51dHJpdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+        
+    }
+}

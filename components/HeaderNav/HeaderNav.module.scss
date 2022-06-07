@@ -1,0 +1,43 @@
+
+#Navbar{
+    background-color: red;
+
+    #logo{
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        color: white;
+        font-size: 1.5em;
+        width: 125px;
+        text-align: center;
+        font-weight: 600;
+        transition: color .5s, background-color .5s, border-radius .3s, font-weight .3s;
+
+        &:hover{
+            border-radius: 40px;
+            color: red;
+            background-color: white;
+            font-weight: 400;
+        }
+    }
+
+    .navLink{
+        transition: border-bottom-color .5s;
+        border-bottom: 1px solid red;
+        font-size: 1.2em;
+
+       &:hover{
+           border-bottom-color: white;
+       }
+    }
+
+    #searchBtn{
+        &:hover{
+            color: red;
+        }
+    }
+
+   *{
+       color: white;
+   }
+
+}
