@@ -20,10 +20,7 @@ export default function HeaderNav(){
                             Exercise
                         </Nav.Link>
                         <Nav.Link href="/nutrition" className={Styles.navLink}>
-                            Nutrition
-                        </Nav.Link>
-                        <Nav.Link href="#" className={Styles.navLink}>
-                            Health
+                            Health &#38; Nutrition
                         </Nav.Link>
                         <Nav.Link href="#" className={Styles.navLink}>
                             Shop
