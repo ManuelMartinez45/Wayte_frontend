@@ -1,27 +1,16 @@
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import { Carousel, Card, Button, Container, Col, Row} from 'react-bootstrap'
 import * as Styles from './ExerciseIndex.module.scss'
 import Link from 'next/link'
+import { useAuth } from '../../context/AuthContext'
 import { useRouter } from 'next/router'
 
 
-export default function ExerciseIndex(){
-    const [exercises, setExercises] = useState([])
-    const exerciseURL = 'https://wayte-backend.herokuapp.com/'
+export default function ExerciseIndex(){ 
+    const { exercises } = useAuth()
     const muscleGroups = []
     const router = useRouter()
     const { muscleGroup } = router.query 
-
-    async function getExercises(){
-        const response = await fetch(exerciseURL)
-        const data = await response.json()
-        setExercises(data)
-    }
-
-    useEffect(() => {
-        getExercises()
-
-    }, [])
 
     const getMuscleGroups = () => {
         exercises.forEach((exercise) => {
@@ -61,6 +50,7 @@ export default function ExerciseIndex(){
             </Col>
         ))
     }
+
     const muscleGroupExerciseDisplay = () => {
         const exerciseList = exercises.filter(exercise => exercise.main.toLowerCase() === muscleGroup.toLowerCase())
 
@@ -119,6 +109,7 @@ export default function ExerciseIndex(){
 
                 <Row id={Styles.exerciseDisplay}>
                     {muscleGroups.includes(muscleGroup) ? muscleGroupExerciseDisplay() : allExerciseDisplay()}
+                    {/* {muscleGroupExerciseDisplay()} */}
                 </Row>
             </Container>
             

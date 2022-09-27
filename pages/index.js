@@ -38,8 +38,8 @@ export default function Home() {
             </Carousel.Item>
           </Carousel>
         </Fade>
-
         <h3 className={styles.sectionHeader}>Nutrition</h3>
+        
         <div id={styles.nutritionSection}>
           <Fade triggerOnce>
             <div className={styles.nutritionArticle}>
@@ -84,4 +84,14 @@ export default function Home() {
         </div>
     </div>
   )
+}
+
+export async function getStaticProps(){
+  console.log(process.env.API_KEY)
+
+  return {
+    props:{
+      hellow: 'world'
+    }
+  }
 }

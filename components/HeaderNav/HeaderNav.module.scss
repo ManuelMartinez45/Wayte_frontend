@@ -30,6 +30,26 @@
        }
     }
 
+    .auth{
+        // border: 1px solid black;
+        transition: border-bottom-color .5s;
+        border-bottom: 1px solid red;
+        font-size: 1.2em;
+        margin-top: .43em;
+        margin-left: .5em;
+        text-decoration: none;
+        
+
+       &:hover{
+           border-bottom-color: white;
+       }
+    }
+
+    .searchBar{
+        color: black;
+        margin-right: 7px;
+    }
+
     #searchBtn{
         &:hover{
             color: red;
@@ -40,4 +60,45 @@
        color: white;
    }
 
+}
+
+#modal{
+    width: 50%;
+
+    #modalHeader{
+        display: flex;
+        justify-content: center;
+        
+        button{
+            margin-top: 1em;
+            background: none;
+            border: none;
+            text-decoration: underline;
+            font-size: 1.5em;
+            
+        }
+    }
+
+    #modalBody{
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+
+        .inputGroup{
+            margin-top: .5em;
+            height: 5em;
+        }
+    }
+
+    #modalFooter{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+    
+}
+
+.selected{
+    color: blue;
 }

@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react'
 import { useMediaQuery } from 'react-haiku'
 import { Container, Row, Col } from 'react-bootstrap'
 import * as Styles from './Exercise.module.scss'
-import Cookie from 'js-cookie'
-import {parseCookies} from '../../../lib/parseCookies'
+// import Cookie from 'js-cookie'
+// import {parseCookies} from '../../../lib/parseCookies'
 
 function Exercise ({ initialExerciseValue }){
 
@@ -16,7 +16,7 @@ function Exercise ({ initialExerciseValue }){
     const smallBreakpoint = useMediaQuery('(max-width: 767px) and (min-width: 576px)')
     const xsmallBreakpoint = useMediaQuery('(max-width: 575px)')
 
-    const [exercise, setExercise] = useState(() => JSON.parse(initialExerciseValue))
+    const [exercise, setExercise] = useState([])
     const exerciseURL = 'https://wayte-backend.herokuapp.com/'
 
     
@@ -39,7 +39,7 @@ function Exercise ({ initialExerciseValue }){
     
     useEffect(() => {
         getExercise()
-        Cookie.set('exercise', JSON.stringify(exercise))
+        // Cookie.set('exercise', JSON.stringify(exercise))
     }, [])
 
     
@@ -139,12 +139,12 @@ function Exercise ({ initialExerciseValue }){
     
 }
 
-Exercise.getInitialProps = ({ req }) => {
-    const cookies = parseCookies(req)
+// Exercise.getInitialProps = ({ req }) => {
+//     const cookies = parseCookies(req)
 
-    return {
-        initialExerciseValue: cookies.exercise
-    }
-}
+//     return {
+//         initialExerciseValue: cookies.exercise
+//     }
+// }
 
 export default Exercise

@@ -1,0 +1,33 @@
+#body{
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+#searchHeader{
+    // color: blue;
+    margin: 2.5em;
+    text-decoration: underline;
+    width: 25%;
+}
+
+#searchTerm{
+    color: red;
+}
+
+.card{
+    height: 100%;
+    
+    img{
+        height: 100%;
+    }
+ 
+    .cardBtn{
+        width: 100%;
+ 
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+ }

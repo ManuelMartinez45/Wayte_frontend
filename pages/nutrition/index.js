@@ -11,7 +11,7 @@ function nutritionIndex(){
                 <Col 
                 lg={{span: 6, offset: 2}}
                 >
-                        <h1 id={Styles.nutritionHeader}>Nutrition</h1>
+                        <h1 id={Styles.nutritionHeader}>Health &#38; Nutrition</h1>
                     
                 </Col>
             </Row>
