@@ -90,7 +90,7 @@ export default function ExerciseIndex(){
                             />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img
+                            <Image
                             src="https://www.muscleandfitness.com/wp-content/uploads/2019/07/Hands-Clapping-Chaulk-Kettlebell.jpg?quality=86&strip=all"
                             alt="Third slide"
                             />
