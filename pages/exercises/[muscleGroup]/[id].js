@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useMediaQuery } from 'react-haiku'
 import { Container, Row, Col } from 'react-bootstrap'
 import * as Styles from './Exercise.module.scss'
+import Image from 'next/image'
 // import Cookie from 'js-cookie'
 // import {parseCookies} from '../../../lib/parseCookies'
 
@@ -38,6 +39,15 @@ function Exercise ({ initialExerciseValue }){
     }
     
     useEffect(() => {
+        async function getExercise(){
+            const response = await fetch(exerciseURL)
+            const data = await response.json()
+            
+            for(let info of data){
+                if(info._id === id) setExercise(info)
+            }
+            
+        }
         getExercise()
         // Cookie.set('exercise', JSON.stringify(exercise))
     }, [])
@@ -105,7 +115,7 @@ function Exercise ({ initialExerciseValue }){
                     sm={{span: 6, offset: 1}}
                     xs={{span: 11, offset: 1}}
                     >
-                    <img id={Styles.exerciseImg} src={exercise.img} alt={exercise.name} />
+                    <Image id={Styles.exerciseImg} src={exercise.img} alt={exercise.name} />
                 </Col>
 
                 <Col 

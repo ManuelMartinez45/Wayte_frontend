@@ -1,4 +1,5 @@
 import * as Styles from './Footer.module.scss'
+import Link from 'next/link'
 
 function Footer(){
     return (
@@ -7,7 +8,7 @@ function Footer(){
                 <ul>
                     <li>About</li>
                     <li>Contact Us</li>
-                    <li><a href="/exercises/all">Exercise Guide</a></li>
+                    <li><Link href="/exercises/all">Exercise Guide</Link></li>
                 </ul>
                     <h5>&copy; Manuel Martinez | 2022 </h5>
             </div>

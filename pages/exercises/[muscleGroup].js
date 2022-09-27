@@ -2,6 +2,7 @@
 import { Carousel, Card, Button, Container, Col, Row} from 'react-bootstrap'
 import * as Styles from './ExerciseIndex.module.scss'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useAuth } from '../../context/AuthContext'
 import { useRouter } from 'next/router'
 
@@ -77,13 +78,13 @@ export default function ExerciseIndex(){
         <>
             <Carousel id={Styles.carousel} controls={false} indicators={false} interval={2500} fade={true}>
                 <Carousel.Item>
-                    <img src="https://api.time.com/wp-content/uploads/2020/03/gym-coronavirus.jpg" alt="" />
+                    <Image src="https://api.time.com/wp-content/uploads/2020/03/gym-coronavirus.jpg" alt="" />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img src="https://business.uoregon.edu/sites/business1.uoregon.edu/files/styles/banner/public/news/Enews-Covid-Gym-Safety-thumb-202101.jpg?itok=kFFfNUfR" alt="" />
+                    <Image src="https://business.uoregon.edu/sites/business1.uoregon.edu/files/styles/banner/public/news/Enews-Covid-Gym-Safety-thumb-202101.jpg?itok=kFFfNUfR" alt="" />
                 </Carousel.Item>
                 <Carousel.Item>
-                            <img
+                            <Image
                             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/guy-training-at-the-gym-royalty-free-image-979026970-1561129165.jpg"
                             alt="Third slide"
                             />
