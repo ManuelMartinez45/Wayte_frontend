@@ -32,6 +32,7 @@ function newWorkout(){
             const { name, main, secondary, mechanics, equipment } = exercise 
             if(
                 name.toLowerCase().includes(searchTerm) ||
+                
                 main.toLowerCase().includes(searchTerm) || 
                 secondary.includes(searchTerm) ||
                 mechanics.includes(searchTerm) ||

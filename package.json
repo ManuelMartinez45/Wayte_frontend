@@ -21,8 +21,6 @@
     "react-bootstrap": "^2.3.1",
     "react-dom": "18.1.0",
     "react-firebase-hooks": "^5.0.3",
-    "react-firebaseui": "^6.0.0",
-    "react-haiku": "^2.0.1",
     "sass": "^1.51.0"
   },
   "devDependencies": {
