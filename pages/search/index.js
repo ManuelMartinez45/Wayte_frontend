@@ -12,28 +12,28 @@ const Search = () =>{
     const searchTerm = search.split(' ')[0].toLowerCase()
     const [displayExercises, setDisplayExercises] = useState([])
 
-    const getExercises = () => {
-        for(let exercise of exercises){
-            const { main, name, secondary, mechanics, equipment } = exercise
-                    if(
-                        !displayExercises.includes(exercise) &&
-                        name.toLowerCase().includes(searchTerm) ||
-                        main.toLowerCase().includes(searchTerm) || 
-                        secondary.includes(searchTerm) ||
-                        mechanics.includes(searchTerm) ||
-                        equipment.includes(searchTerm)
-                    )  setDisplayExercises(displayExercises => [...displayExercises, exercise])
-        }
-    }
-
+    
     useEffect(() => {
+        const getExercises = () => {
+            for(let exercise of exercises){
+                const { main, name, secondary, mechanics, equipment } = exercise
+                        if(
+                            !displayExercises.includes(exercise) &&
+                            name.toLowerCase().includes(searchTerm) ||
+                            main.toLowerCase().includes(searchTerm) || 
+                            secondary.includes(searchTerm) ||
+                            mechanics.includes(searchTerm) ||
+                            equipment.includes(searchTerm)
+                        )  setDisplayExercises(displayExercises => [...displayExercises, exercise])
+            }
+        }
         getExercises()
     }, [])
     console.log(displayExercises)
 
     return (
         <>
-            <h4 id={Styles.searchHeader}>Search Results for "<span id={Styles.searchTerm}>{search}</span>": </h4>
+            <h4 id={Styles.searchHeader}>Search Results for &quot;<span id={Styles.searchTerm}>{search}</span>&quot;: </h4>
             <Container fluid id={Styles.body}>
                 <Row>
                     { displayExercises.map((exercise) => (

@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { Button, Form, Container, Row, Col } from 'react-bootstrap'
 import * as Styles from './NewWorkout.module.scss'
 
-function newWorkout(){
+function NewWorkout(){
     const { user, exercises } = useAuth()
     const [ searchTerm, setSearchTerm] = useState('')
     const [ sets, setSets ] = useState('')
@@ -231,4 +231,4 @@ function newWorkout(){
     )
 }
 
-export default newWorkout
+export default NewWorkout

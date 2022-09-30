@@ -20,6 +20,7 @@ function Exercise ({ initialExerciseValue }){
     let exerciseIMG
     
     async function getExercise(){
+        
         const response = await fetch(exerciseURL)
         const data = await response.json()
         
@@ -37,6 +38,7 @@ function Exercise ({ initialExerciseValue }){
     // }
     
     useEffect(() => {
+        const { id } = router.query
         async function getExercise(){
             const response = await fetch(exerciseURL)
             const data = await response.json()
@@ -47,11 +49,8 @@ function Exercise ({ initialExerciseValue }){
             
         }
         getExercise()
-    },[])
+    })
     
-    exerciseIMG = exercise.img
-
-    console.log(exerciseIMG)
     const secondaryDisplay = () => {
         if(exercise.secondary && exercise.secondary.length > 1) return exercise.secondary.join(', ')
         return exercise.secondary
@@ -117,8 +116,8 @@ function Exercise ({ initialExerciseValue }){
                     >
                     <Image 
                     id={Styles.exerciseImg} 
-                    loader={() => exerciseIMG} 
-                    src='exerciseIMG'
+                    loader={() => exercise.img} 
+                    src='exerciseImage'
                     width={250}
                     height={150}
                     layout='responsive'

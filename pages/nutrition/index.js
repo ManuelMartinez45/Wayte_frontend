@@ -81,7 +81,7 @@ function nutritionIndex(){
                 <Col lg={{span: 8, offset: 2}}>
                     <div id={Styles.quoteRow}>
                         <h4>
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptate aliquam repudiandae optio sapiente dolorem qui cupiditate placeat ut cum error excepturi,"
+                        &quot; Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptate aliquam repudiandae optio sapiente dolorem qui cupiditate placeat ut cum error excepturi, &quot;
                         <br />
                         </h4>
                         <h5>- John Doe</h5>
