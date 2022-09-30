@@ -11,9 +11,10 @@ const Search = () =>{
     const { search } = router.query
     const searchTerm = search.split(' ')[0].toLowerCase()
     const [displayExercises, setDisplayExercises] = useState([])
-
+    
     
     useEffect(() => {
+
         const getExercises = () => {
             for(let exercise of exercises){
                 const { main, name, secondary, mechanics, equipment } = exercise
@@ -28,8 +29,7 @@ const Search = () =>{
             }
         }
         getExercises()
-    }, [])
-    console.log(displayExercises)
+    })
 
     return (
         <>
