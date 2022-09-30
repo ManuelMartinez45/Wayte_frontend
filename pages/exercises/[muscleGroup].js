@@ -13,6 +13,11 @@ export default function ExerciseIndex(){
     const router = useRouter()
     const { muscleGroup } = router.query 
 
+    const carousel1 = 'https://api.time.com/wp-content/uploads/2020/03/gym-coronavirus.jpg'
+    const carousel2 = 'https://business.uoregon.edu/sites/business1.uoregon.edu/files/styles/banner/public/news/Enews-Covid-Gym-Safety-thumb-202101.jpg?itok=kFFfNUfR'
+    const carousel3 = 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/guy-training-at-the-gym-royalty-free-image-979026970-1561129165.jpg'
+    const carousel4 = 'https://www.muscleandfitness.com/wp-content/uploads/2019/07/Hands-Clapping-Chaulk-Kettlebell.jpg?quality=86&strip=all'
+
     const getMuscleGroups = () => {
         exercises.forEach((exercise) => {
             if(!(muscleGroups.includes(exercise.main)) && exercise.main !== 'Shoulder') muscleGroups.push(exercise.main)
@@ -78,20 +83,32 @@ export default function ExerciseIndex(){
         <>
             <Carousel id={Styles.carousel} controls={false} indicators={false} interval={2500} fade={true}>
                 <Carousel.Item>
-                    <Image src="https://api.time.com/wp-content/uploads/2020/03/gym-coronavirus.jpg" alt="" />
+                    <Image
+                        layout='fill' 
+                        loader={() => carousel1} 
+                        src={carousel1} 
+                        alt="" />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <Image src="https://business.uoregon.edu/sites/business1.uoregon.edu/files/styles/banner/public/news/Enews-Covid-Gym-Safety-thumb-202101.jpg?itok=kFFfNUfR" alt="" />
+                    <Image
+                        layout='fill'
+                        loader={() => carousel2} 
+                        src={carousel2} 
+                        alt="" />
                 </Carousel.Item>
                 <Carousel.Item>
                             <Image
-                            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/guy-training-at-the-gym-royalty-free-image-979026970-1561129165.jpg"
-                            alt="Third slide"
+                                layout='fill'
+                                loader={() => carousel3}
+                                src={carousel3}
+                                alt="Third slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <Image
-                            src="https://www.muscleandfitness.com/wp-content/uploads/2019/07/Hands-Clapping-Chaulk-Kettlebell.jpg?quality=86&strip=all"
+                            layout='fill'
+                            loader={() => carousel4}
+                            src={carousel4}
                             alt="Third slide"
                             />
                         </Carousel.Item>

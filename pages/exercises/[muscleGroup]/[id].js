@@ -1,25 +1,23 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import { useMediaQuery } from 'react-haiku'
+// import { useMediaQuery } from 'react-haiku'
 import { Container, Row, Col } from 'react-bootstrap'
 import * as Styles from './Exercise.module.scss'
 import Image from 'next/image'
-// import Cookie from 'js-cookie'
-// import {parseCookies} from '../../../lib/parseCookies'
 
 function Exercise ({ initialExerciseValue }){
 
     const router = useRouter()
     const { id } = router.query
 
-    const largeBreakpoint = useMediaQuery('(min-width: 992px)')
-    const mediumBreakpoint = useMediaQuery('(max-width: 991px) and (min-width:  768px)')
-    const smallBreakpoint = useMediaQuery('(max-width: 767px) and (min-width: 576px)')
-    const xsmallBreakpoint = useMediaQuery('(max-width: 575px)')
+    // const largeBreakpoint = useMediaQuery('(min-width: 992px)')
+    // const mediumBreakpoint = useMediaQuery('(max-width: 991px) and (min-width:  768px)')
+    // const smallBreakpoint = useMediaQuery('(max-width: 767px) and (min-width: 576px)')
+    // const xsmallBreakpoint = useMediaQuery('(max-width: 575px)')
 
     const [exercise, setExercise] = useState([])
     const exerciseURL = 'https://wayte-backend.herokuapp.com/'
-
+    let exerciseIMG
     
     async function getExercise(){
         const response = await fetch(exerciseURL)
@@ -31,12 +29,12 @@ function Exercise ({ initialExerciseValue }){
         
     }
 
-    const screenSize = () => {
-        if(largeBreakpoint) return Styles.large
-        if(mediumBreakpoint) return  Styles.medium
-        if(smallBreakpoint) return Styles.small
-        if(xsmallBreakpoint) return  Styles.xsmall
-    }
+    // const screenSize = () => {
+    //     if(largeBreakpoint) return Styles.large
+    //     if(mediumBreakpoint) return  Styles.medium
+    //     if(smallBreakpoint) return Styles.small
+    //     if(xsmallBreakpoint) return  Styles.xsmall
+    // }
     
     useEffect(() => {
         async function getExercise(){
@@ -49,10 +47,11 @@ function Exercise ({ initialExerciseValue }){
             
         }
         getExercise()
-        // Cookie.set('exercise', JSON.stringify(exercise))
-    }, [])
-
+    },[])
     
+    exerciseIMG = exercise.img
+
+    console.log(exerciseIMG)
     const secondaryDisplay = () => {
         if(exercise.secondary && exercise.secondary.length > 1) return exercise.secondary.join(', ')
         return exercise.secondary
@@ -67,7 +66,7 @@ function Exercise ({ initialExerciseValue }){
             }
             
             const exerciseInfoDisplay = () => {
-                if(xsmallBreakpoint){
+                if(!exercise){
                     return (
                         <Col>
                     <div id={Styles.exerciseInfo}>
@@ -106,7 +105,8 @@ function Exercise ({ initialExerciseValue }){
     
 
     return (
-        <Container id={screenSize()} fluid>
+        <Container fluid>
+        {/* <Container id={screenSize()} fluid> */}
             <Row>
                 <h1 id={Styles.exerciseTitle}>{exercise.name}</h1>
             </Row>
@@ -115,12 +115,17 @@ function Exercise ({ initialExerciseValue }){
                     sm={{span: 6, offset: 1}}
                     xs={{span: 11, offset: 1}}
                     >
-                    <Image id={Styles.exerciseImg} src={exercise.img} alt={exercise.name} />
+                    <Image 
+                    id={Styles.exerciseImg} 
+                    loader={() => exerciseIMG} 
+                    src='exerciseIMG'
+                    width={250}
+                    height={150}
+                    layout='responsive'
+                    alt={exercise.name} />
                 </Col>
 
                 <Col 
-                    // lg={{span: 3, offset: 1}}
-                    // md={{span: 3, offset: 1}}
                     sm={{span: 3, offset: 1}}
                     xs={{span: 9, offset: 2}}
                     >
@@ -130,8 +135,6 @@ function Exercise ({ initialExerciseValue }){
             
             <Row>
                 <Col
-                    // lg={{span: 10, offset: 1}}
-                    // md={{span: 10, offset: 1}}
                     sm={{span: 10, offset: 1}}
                     xs={{span: 10, offset: 1}}
                     >
